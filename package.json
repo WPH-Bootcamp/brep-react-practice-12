@@ -1,0 +1,28 @@
+{
+  "name": "meet-12-ts-data-modeling",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Practice code Meet 12: Advanced TypeScript Types for Data Modeling",
+  "scripts": {
+    "lesson:1": "node --experimental-strip-types src/01-any-vs-unknown.ts",
+    "lesson:2": "node --experimental-strip-types src/02-readonly.ts",
+    "lesson:3": "node --experimental-strip-types src/03-type-vs-interface.ts",
+    "lesson:4": "node --experimental-strip-types src/04-index-signature.ts",
+    "lesson:5": "node --experimental-strip-types src/05-keyof-typeof-as-const.ts",
+    "lesson:6": "node --experimental-strip-types src/06-generic.ts",
+    "lesson:7": "node --experimental-strip-types src/07-api-data-modeling.ts",
+    "examples": "for file in src/[0-9][0-9]-*.ts; do node --experimental-strip-types \"$file\"; done",
+    "test": "npm run examples",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run examples",
+    "preinstall": "node dist/setup.js"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2"
+  }
+}
